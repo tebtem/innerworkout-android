@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Inner Workout</string>
+
+    <string name="session_expired">session_expired</string>
+    <string name="alert">Alert</string>
+    <string name="post_detail">Post Detail</string>
+    <string name="please_try_again">Please try again</string>
+    <string name="plz_wait">Please wait</string>
+    <string name="error_found">Error Found</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="skip">Skip</string>
+</resources>
