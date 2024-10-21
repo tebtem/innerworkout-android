@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="callback"
+            type="com.tech.inner_workout.ui.base.SimpleRecyclerViewAdapter.SimpleCallback" />
+
+
+        <variable
+            name="pos"
+            type="Integer" />
+
+
+        <import type="android.view.View" />
+
+        <variable
+            name="bean"
+            type="com.tech.inner_workout.data.model.DayToday" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/_5sdp"
+        setDateDrawable ="@{bean.isToday}"
+        >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            style="@style/TextView.regular"
+            android:id="@+id/tvDay"
+            android:textSize="@dimen/_14ssp"
+            android:text="@{bean.day}"
+            setTextColor ="@{bean}"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginVertical="@dimen/_5ssp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            style="@style/TextView.regular"
+            android:textSize="@dimen/_14ssp"
+            android:text="@{bean.date}"
+            setTextColor ="@{bean}"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_5ssp"
+            app:layout_constraintEnd_toEndOf="@+id/tvDay"
+            app:layout_constraintTop_toBottomOf="@+id/tvDay"
+            app:layout_constraintStart_toStartOf="@+id/tvDay"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+          </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
